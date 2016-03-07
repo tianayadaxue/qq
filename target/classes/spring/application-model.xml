@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="currentUserInfoModel" class="com.learn.qq.model.impl.CurrentUserInfoModel">
+        <property name="currentUserInfoService" ref="currentUserInfoService" />
+    </bean>
+
+    <bean id="friendListModel" class="com.learn.qq.model.impl.FriendListModel">
+        <property name="friendListService" ref="friendListService" />
+    </bean>
+
+    <bean id="workToolModel" class="com.learn.qq.model.impl.WorkToolController">
+        <property name="workToolService" ref="workToolService" />
+    </bean>
+
+</beans>

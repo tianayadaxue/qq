@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <!-- <bean/> definitions here -->
+    <bean id="currentUserInfoService" class="com.learn.qq.service.impl.CurrentUserInfoServiceImpl" />
+
+    <bean id="friendListService" class="com.learn.qq.service.impl.FriendListService" />
+
+    <bean id="workToolService" class="com.learn.qq.service.impl.WorkToolService" />
+</beans>

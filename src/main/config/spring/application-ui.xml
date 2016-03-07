@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+
+    <!-- <beans/> definitions here -->
+    <bean id="qqMainDialog" class="com.learn.qq.view.QQMainFrame">
+        <constructor-arg ref="currentUserInfoPanel" />
+        <constructor-arg ref="friendListPanel" />
+        <constructor-arg ref="workToolPanel" />
+    </bean>
+
+    <bean id="currentUserInfoPanel" class="com.learn.qq.view.CurrentUserInfoPanel">
+        <constructor-arg ref="currentUserInfoModel" />
+        <property name="currentUserInfoController" ref="currentUserInfoController" />
+    </bean>
+
+    <bean id="friendListPanel" class="com.learn.qq.view.FriendListPanel">
+        <constructor-arg ref="friendListModel" />
+        <property name="friendListController" ref="friendListController" />
+    </bean>
+
+    <bean id="workToolPanel" class="com.learn.qq.view.WorkToolPanel">
+        <constructor-arg ref="workToolModel" />
+        <property name="workToolController" ref="workToolController" />
+    </bean>
+</beans>
